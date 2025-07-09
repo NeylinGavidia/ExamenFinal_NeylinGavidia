@@ -122,8 +122,10 @@ namespace Arreglos
         {
             Console.BackgroundColor = ConsoleColor.DarkYellow;
             Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine($"{"Galletas compradas (semanal)",-40}{"Lunes",10}{"Martes",10}{"Miércoles",11}{"Jueves",10}{"Viernes",10}{"Sábado",10}{"Domingo",10}");
+            Console.WriteLine($"{"Galletas compradas (semanal)",-40}{"Lunes",10}{"Martes",10}{"Miércoles",11}{"Jueves",10}{"Viernes",10}{"Sábado",10}{"Domingo",10}{"Total por galleta",20}");
             Console.ResetColor();
+            //"Chocosoda", "Oreo", "Pícaras", "Chocman", "Frac", "Tentación", "Gretel"
+            int SumaGa = 1000;
 
             for (int i = 0; i < matriz.GetLength(0); i++)
             {
@@ -132,11 +134,16 @@ namespace Arreglos
                 for (int j = 0; j < matriz.GetLength(1); j++)
                 {
                     Console.Write($"{matriz[i, j],10}");
+                    
                 }
-
+                //arreglar para que esto sume por galletas
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine($"{SumaGa,15}");
                 Console.WriteLine();
+                Console.ResetColor();
 
             }
+            //corregir sumas (suma por diar)
             int sumaL = 1000;
             int sumaMa = 1000;
             int sumaMi = 1000;
@@ -144,7 +151,13 @@ namespace Arreglos
             int sumaV = 1000;
             int sumaS = 1000;
             int sumaD = 1000;
-            Console.WriteLine($"{"Ventas totales (semanal)",-40}{sumaL,10}{sumaMa,10}{sumaMi,11}{sumaJ,10}{sumaV,10}{sumaS,10}{sumaD,10}");
+            int sumaTotal = 7000;
+            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Write($"{"Ventas totales (semanal)",-40}{sumaL,10}{sumaMa,10}{sumaMi,11}{sumaJ,10}{sumaV,10}{sumaS,10}{sumaD,10}");
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine($"{sumaTotal,15}");
+            Console.ResetColor();
         }
     }
 }
