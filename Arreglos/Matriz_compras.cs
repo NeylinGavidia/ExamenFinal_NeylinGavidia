@@ -22,74 +22,129 @@ namespace Arreglos
             {
                 //Console.Write(estudiantes[i] +": "); //esto si quieres ingresar nota
                 //matriz[i, col] = int.Parse(Console.ReadLine()); //Igualar a la variable que indicara el numero de la columna
-                int precio = r.Next(0, 201);
+                int precio = r.Next(20, 201);
                 Console.WriteLine(articulos[i] + ": " + precio);
                 Thread.Sleep(500);
                 matriz[i, galleta] = precio;
             }
         }
-        public void GenerarT2()
+        public void Martes()
         {
             int galleta = 1;
             Random r = new Random();
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("________T2________\n");
+            Console.WriteLine("________Martes________\n");
             Console.BackgroundColor = ConsoleColor.Black;
             for (int i = 0; i < matriz.GetLength(0); i++) //lo que va dentro del getlength es la dimension se cuenta desde cero la posicion de los corchetes
             {
-                int precio = r.Next(0, 201);
+                int precio = r.Next(20, 201);
                 Console.WriteLine(articulos[i] + ": " + precio);
                 Thread.Sleep(500);
                 matriz[i, galleta] = precio;
             }
         }
-        public void GenerarT3()
+        public void Miercoles()
         {
             int galleta = 2;
             Random r = new Random();
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("________T3________\n");
+            Console.WriteLine("________Miercoles________\n");
             Console.BackgroundColor = ConsoleColor.Black;
             for (int i = 0; i < matriz.GetLength(0); i++) //lo que va dentro del getlength es la dimension se cuenta desde cero la posicion de los corchetes
             {
-                int precio = r.Next(0, 201);
+                int precio = r.Next(20, 201);
                 Console.WriteLine(articulos[i] + ": " + precio);
                 Thread.Sleep(500);
                 matriz[i, galleta] = precio;
             }
         }
-        public void GenerarEF()
+        public void Jueves()
         {
             int galleta = 3;
             Random r = new Random();
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine("________EF________\n");
+            Console.WriteLine("________Jueves________\n");
             Console.BackgroundColor = ConsoleColor.Black;
             for (int i = 0; i < matriz.GetLength(0); i++) //lo que va dentro del getlength es la dimension se cuenta desde cero la posicion de los corchetes
             {
-                int precio = r.Next(0, 201);
+                int precio = r.Next(20, 201);
                 Console.WriteLine(articulos[i] + ": " + precio);
                 Thread.Sleep(500);
                 matriz[i, galleta] = precio;
             }
         }
-        public void Registro()
+        public void Viernes()
+        {
+            int galleta = 4;
+            Random r = new Random();
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("________Viernes________\n");
+            Console.BackgroundColor = ConsoleColor.Black;
+            for (int i = 0; i < matriz.GetLength(0); i++) //lo que va dentro del getlength es la dimension se cuenta desde cero la posicion de los corchetes
+            {
+                int precio = r.Next(20, 201);
+                Console.WriteLine(articulos[i] + ": " + precio);
+                Thread.Sleep(500);
+                matriz[i, galleta] = precio;
+            }
+        }
+        public void Sabado()
+        {
+            int galleta = 5;
+            Random r = new Random();
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("________Sábado________\n");
+            Console.BackgroundColor = ConsoleColor.Black;
+            for (int i = 0; i < matriz.GetLength(0); i++) //lo que va dentro del getlength es la dimension se cuenta desde cero la posicion de los corchetes
+            {
+                int precio = r.Next(20, 201);
+                Console.WriteLine(articulos[i] + ": " + precio);
+                Thread.Sleep(500);
+                matriz[i, galleta] = precio;
+            }
+        }
+        public void Domingo()
+        {
+            int galleta = 6;
+            Random r = new Random();
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("________Domingo________\n");
+            Console.BackgroundColor = ConsoleColor.Black;
+            for (int i = 0; i < matriz.GetLength(0); i++) //lo que va dentro del getlength es la dimension se cuenta desde cero la posicion de los corchetes
+            {
+                int precio = r.Next(20, 201);
+                Console.WriteLine(articulos[i] + ": " + precio);
+                Thread.Sleep(500);
+                matriz[i, galleta] = precio;
+            }
+        }
+        public void Matriz()
         {
             Console.BackgroundColor = ConsoleColor.DarkYellow;
             Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine($"{"Galletas compradas (semanal)",-30}{"Lunes",5}{"Martes",5}{"Miércoles",5}{"Jueves",5}{"Viernes",5}{"Sábado",5}{"Domingo",5}");
+            Console.WriteLine($"{"Galletas compradas (semanal)",-40}{"Lunes",10}{"Martes",10}{"Miércoles",11}{"Jueves",10}{"Viernes",10}{"Sábado",10}{"Domingo",10}");
             Console.ResetColor();
 
             for (int i = 0; i < matriz.GetLength(0); i++)
             {
-                Console.Write($"{articulos[i],-30}");
+                Console.Write($"{articulos[i],-40}");
 
                 for (int j = 0; j < matriz.GetLength(1); j++)
                 {
-                    Console.Write($"{matriz[i, j],5}");
+                    Console.Write($"{matriz[i, j],10}");
                 }
 
                 Console.WriteLine();
+
             }
+            int sumaL = 1000;
+            int sumaMa = 1000;
+            int sumaMi = 1000;
+            int sumaJ = 1000;
+            int sumaV = 1000;
+            int sumaS = 1000;
+            int sumaD = 1000;
+            Console.WriteLine($"{"Ventas totales (semanal)",-40}{sumaL,10}{sumaMa,10}{sumaMi,11}{sumaJ,10}{sumaV,10}{sumaS,10}{sumaD,10}");
         }
+    }
 }
